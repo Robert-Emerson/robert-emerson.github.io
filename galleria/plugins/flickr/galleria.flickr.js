@@ -221,7 +221,7 @@ Galleria.Flickr.prototype = {
 
         if ( photo.url_l ) {
             return photo.url_l;
-        } else if ( parseInt( photo.width_o, 10 ) > 1280 ) {
+        } else if ( parseInt( photo.width_o, 10 ) > 1600 ) {
 
             return 'https://farm'+photo.farm + '.static.flickr.com/'+photo.server +
                 '/' + photo.id + '_' + photo.secret + '_b.jpg';
@@ -229,6 +229,11 @@ Galleria.Flickr.prototype = {
 
         return photo.url_o || photo.url_z || photo.url_m;
 
+    },
+
+    _getExtraBig: function (photo) {
+
+        return photo.url_h ? photo.url_h : this.get_Big( photo );
     },
 
 
@@ -249,11 +254,11 @@ Galleria.Flickr.prototype = {
                 break;
 
             case 'big':
-                img = this._getBig( photo );
+                img = this._getExtraBig( photo );
                 break;
 
             case 'original':
-                img = photo.url_o ? photo.url_o : this._getBig( photo );
+                img = photo.url_o ? photo.url_o : this._getExtraBig( photo );
                 break;
 
             default:
@@ -270,7 +275,7 @@ Galleria.Flickr.prototype = {
 
         params = $.extend({
             method: 'flickr.photos.search',
-            extras: 'url_t,url_m,url_o,url_s,url_l,url_z,description',
+            extras: 'url_t,url_m,url_o,url_s,url_l,url_z,url_h,description',
             sort: this.options.sort,
             per_page: Math.min( this.options.max, 500 )
         }, params );
@@ -290,7 +295,8 @@ Galleria.Flickr.prototype = {
                 gallery.push({
                     thumb: this._getSize( photo, this.options.thumbSize ),
                     image: this._getSize( photo, this.options.imageSize ),
-                    big: this._getBig( photo ),
+                    // big: this._getBig( photo ),
+                    big: photo.url_h,
                     title: photos[i].title,
                     description: this.options.description && photos[i].description ? photos[i].description._content : '',
                     link: this.options.backlink ? 'https://flickr.com/photos/' + photo.owner + '/' + photo.id : ''
@@ -334,7 +340,7 @@ Galleria.prototype.load = function() {
                 width: 48,
                 height: 48,
                 opacity: 0.7,
-                background:'#000 url('+PATH+'loader.gif) no-repeat 50% 50%'
+                background:'#000 url('+PATH+'loader.gif) no-repeat'
             });
 
     if ( flickr.length ) {

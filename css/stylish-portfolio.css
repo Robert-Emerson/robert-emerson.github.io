@@ -225,8 +225,8 @@ i.scroll:hover {
 
 /* Gallery */
 .gallery {
-  height: 100%;
-  background: #AAA;
+  height: 95%;
+  background: #000;
 }
 
 .gallery a {
@@ -234,7 +234,7 @@ i.scroll:hover {
 }
 
 .galleria {
-  height: 95%;
+  height: 100%;
   max-height: 1000px;
 
 }
