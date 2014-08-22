@@ -125,19 +125,24 @@ body {
   padding: 50px 0;
 }
 
-/* Services */
+/* Projects */
 
-.services {
+.projects {
   background: #7fbbda;
   padding: 50px 0;
   color: #ffffff;
 }
 
-.service-item {
+.project-item {
   margin-bottom: 15px;
 }
 
-i.service-icon {
+.project-title {
+  color:#FFF;
+  text-decoration: underline; 
+}
+
+i.project-icon {
   border: 3px solid #ffffff;
   border-radius: 50%;
   display: inline-block;
@@ -212,7 +217,6 @@ footer {
 }
 
 i.scroll {
-  color: #333333;
 }
 
 i.scroll:hover {
@@ -222,7 +226,7 @@ i.scroll:hover {
 /* Gallery */
 .gallery {
   height: 100%;
-  background: #000;
+  background: #AAA;
 }
 
 .gallery a {
