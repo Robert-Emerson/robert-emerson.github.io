@@ -133,8 +133,12 @@ body {
 
 .projects {
   background: #7fbbda;
-  padding: 50px 0;
+  padding: 10px 0;
   color: #ffffff;
+}
+
+p.projects {
+  font-size: 1.2em;
 }
 
 .project-item {
@@ -248,10 +252,6 @@ i.scroll:hover {
 	
   .header {
 	background: url(../img/bg.jpg) no-repeat center center scroll; 
-  }
-
-  .callout {
-	background: url(../img/callout.jpg) no-repeat center center scroll; 
   }
 
   .map {
