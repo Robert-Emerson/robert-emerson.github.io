@@ -42,7 +42,7 @@
     <div id="top" class="header">
         <div class="vert-text">
             <h1>robert emerson</h1>
-            <a href="#about" class="btn btn-default btn-lg">(enter)</a>
+            <h3><a href="#about" id="enter">{enter}</a></h3>
         </div>
     </div>
     <!-- /Full Page Image Header Area -->
@@ -73,28 +73,28 @@
             <div class="row">
                 <div class="col-md-2 col-md-offset-2 text-center">
                     <div class="project-item">
-                        <i class="project-icon fa fa-rocket"></i>
+                        <i class="project-icon fa fa-folder-open-o"></i>
                         <h4><a class="project-title" href="https://github.com/MisterAbc/cs3240-team-4f">Python Dropbox Clone</a></h4>
                         <p>Dropbox-like Unix application that allows file syncing between multiple computers and a server. Built for UVa CS 3240 - Advanced Software Development.</p>
                     </div>
                 </div>
                 <div class="col-md-2 text-center">
                     <div class="project-item">
-                        <i class="project-icon fa fa-magnet"></i>
+                        <i class="project-icon fa fa-cloud"></i>
                         <h4><a class="project-title" href="https://github.com/Robert-Emerson/potential-octo-hipster">Twitter Data Analysis </a></h4>
                         <p>Map-Reduce Python program designed to gauge Twitter user sentiment on the almost ousting of UVa President Teresa Sullivan in June 2012 by scanning 50,000+ archived tweets. Built for UVa CS 4501 - Cloud Computing</p>
                     </div>
                 </div>
                 <div class="col-md-2 text-center">
                     <div class="project-item">
-                        <i class="project-icon fa fa-shield"></i>
+                        <i class="project-icon fa fa-globe"></i>
                         <h4><a class="project-title" href="https://github.com/Robert-Emerson/sites_to_see_public"> Sites To See </a></h4>
                         <p>Travel web-app that allows users to search for interesting places to visit in a given location, then share itinerary via text. Built for hack.uva 2014 and winner of the Twilio API prize.</p>
                     </div>
                 </div>
                 <div class="col-md-2 text-center">
                     <div class="project-item">
-                        <i class="project-icon fa fa-pencil"></i>
+                        <i class="project-icon fa fa-file-code-o"></i>
                         <h4><a class="project-title" href="https://github.com/Robert-Emerson/"> And Many More! </a></h4>
                         <p>There are many more projects on my GitHub page! I've worked on lots of crazy things, from a C++ implemntation of the Karger Klein Tarjan MST algorithm to a photo scavenger hunt Android application.</p>
                     </div>
@@ -103,26 +103,6 @@
         </div>
     </div>
     <!-- /projects -->
-
-    <!-- Gallery -->
-   <div id="gallery" class="gallery">
-    	<div id="galleria" class="galleria"> </div>    	
-	</div>
-    <!-- /Portfolio -->
-
-    <!-- Call to Action -->
-    <div id="contact" class="call-to-action">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-default">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Call to Action -->
 
     <!-- Footer -->
     <footer>
@@ -139,13 +119,15 @@
                         </li>
                         <li><a href="https://github.com/Robert-Emerson"><i class="fa fa-github fa-3x"></i></a>
                         </li>
+                        <li><a href="mailto:remerson@virginia.edu"><i class="fa fa-envelope-o fa-3x"></i></a>
+                        </li>
                     </ul>
                     <div>
                         <a href="#top"><i class="fa fa-arrow-circle-up scroll fa-3x"></i></a>
                     </div>
                     <hr>
                     <p>Copyright &copy; Robert Emerson 2014</p>
-                    <p> Built with <a href="http://startbootstrap.com/template-overviews/stylish-portfolio/"> Stylish Portfolio </a> and <a href="http://galleria.io/"> Galleria </a> </p>
+                    <p> Built with <a href="http://startbootstrap.com/template-overviews/stylish-portfolio/"> Stylish Portfolio </a> </p>
                 </div>
             </div>
         </div>
@@ -185,33 +167,6 @@
             }
         });
     });
-    </script>
-
-    <!-- Scripts for Galleria -->
-    <script src="galleria/galleria-1.4.2.min.js"></script>
-    <script src="galleria/plugins/flickr/galleria.flickr.js"></script>
-    <script>
-        Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
-        var flickr = new Galleria.Flickr();
-        flickr.setOptions( {imageSize: "big", max: "50"});
-        flickr.user('89587683@N06', function(data) {
-            Galleria.run('#galleria', {
-
-                extend:function() {
-                    var gallery = this; 
-                    gallery.attachKeyboard({
-                        left: gallery.prev,
-                        right: gallery.next,
-                    });
-
-                    $("#fullscreen").click(function() {
-                        event.preventDefault();
-                        gallery.enterFullscreen(); 
-                    });
-
-                }, dataSource: data
-            });
-        });
     </script>
 
 </body>
