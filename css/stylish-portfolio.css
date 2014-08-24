@@ -4,6 +4,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  font-family: "franklin gothic book", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .vert-text {
@@ -162,90 +163,12 @@ i.project-icon {
   text-align: center;
 }
 
-/* Callout */
-
-.callout {
-  color: #ffffff;
-  display: table;
-  height: 400px;
-  width: 100%;
-  background: url(../img/callout.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-/* Portfolio */
-
-.portfolio {
-  padding: 50px 0;
-}
-
-.portfolio-item {
-  margin-bottom: 25px;
-}
-
-.img-portfolio {
-  margin: 0 auto;
-}
-
-
-/* Call to Action */
-
-.call-to-action {
-  color: #ffffff;
-  background: #0a5175;
-  padding: 50px 0;
-}
-
-.call-to-action .btn {
-  margin: 10px;
-}
-
-/* Map */
-
-.map {
-  height: 500px;
-}
-
 /* Footer */
 
 footer {
   padding: 100px 0;
 }
 
-.top-scroll {
-  margin-top: 50px;
-}
-
-.top-scroll a {
-  text-decoration: none;
-  color: inherit;
-}
-
-i.scroll {
-}
-
-i.scroll:hover {
-  color: #0a5175;
-}
-
-/* Gallery */
-.gallery {
-  height: 95%;
-  background: #000;
-}
-
-.gallery a {
-  color: #FFF;
-}
-
-.galleria {
-  height: 100%;
-  max-height: 1000px;
-
-}
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -253,9 +176,4 @@ i.scroll:hover {
   .header {
 	background: url(../img/bg.jpg) no-repeat center center scroll; 
   }
-
-  .map {
-	height: 75%;
-  }
-
 }
